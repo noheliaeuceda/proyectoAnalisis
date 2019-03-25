@@ -138,7 +138,7 @@ public class Ventana extends javax.swing.JFrame {
         int id = grafo.size();
         Node nodo = new Node(id, id);
         grafo.add(nodo);
-        JOptionPane.showMessageDialog(this, "Se ha agregado exitosamente");
+//        JOptionPane.showMessageDialog(this, "Se ha agregado exitosamente");
         DefaultComboBoxModel modelo = new DefaultComboBoxModel();
         DefaultComboBoxModel modelo2 = new DefaultComboBoxModel();
         for (int i = 0; i < grafo.size(); i++) {
@@ -184,8 +184,6 @@ public class Ventana extends javax.swing.JFrame {
         ArrayList<Node> potenciales = new ArrayList();
         ArrayList<Node> encontrados = new ArrayList();
         clique(potenciales, grafo, encontrados);
-        time_end = System.currentTimeMillis();
-        System.out.println("the task has taken " + (time_end - time_start) + " milliseconds");
         print = cargar();
         int max = 0;
         int index = 0;
@@ -204,6 +202,8 @@ public class Ventana extends javax.swing.JFrame {
         }
         grafo = print;
         dibujarGrafo(grafo);
+        time_end = System.currentTimeMillis();
+        JOptionPane.showMessageDialog(this, "La tarea tomo " + (time_end - time_start) + " milliseconds");
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked

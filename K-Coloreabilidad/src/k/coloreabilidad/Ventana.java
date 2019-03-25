@@ -137,7 +137,7 @@ public class Ventana extends javax.swing.JFrame {
         int id = grafo.size();
         Node nodo = new Node(id, id);
         grafo.add(nodo);
-        JOptionPane.showMessageDialog(this, "Se ha agregado exitosamente");
+//        JOptionPane.showMessageDialog(this, "Se ha agregado exitosamente");
         DefaultComboBoxModel modelo = new DefaultComboBoxModel();
         DefaultComboBoxModel modelo2 = new DefaultComboBoxModel();
         for (int i = 0; i < grafo.size(); i++) {
@@ -168,7 +168,7 @@ public class Ventana extends javax.swing.JFrame {
                 Arista aristaA2 = new Arista(grafo.get(dest), grafo.get(ori));
                 grafo.get(ori).getAristas().add(aristaA1);
                 grafo.get(dest).getAristas().add(aristaA2);
-                JOptionPane.showMessageDialog(this, "Se a creado la arista Exitosamente");
+//                JOptionPane.showMessageDialog(this, "Se a creado la arista Exitosamente");
             } else {
                 JOptionPane.showMessageDialog(this, "Ya existe esta arista");
             }
@@ -184,9 +184,9 @@ public class Ventana extends javax.swing.JFrame {
         time_start = System.currentTimeMillis();
         MCIAlgoritm(grafo);
         time_end = System.currentTimeMillis();
-        System.out.println("the task has taken " + (time_end - time_start) + " milliseconds");
         grafo = grafoGlobal;
         dibujarGrafo(grafo);
+        JOptionPane.showMessageDialog(this, "La tarea tomo " + (time_end - time_start) + " milisegundos");
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked

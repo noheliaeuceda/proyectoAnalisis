@@ -184,6 +184,7 @@ public class Ventana extends javax.swing.JFrame {
         ArrayList<Node> potenciales = new ArrayList();
         ArrayList<Node> encontrados = new ArrayList();
         clique(potenciales, grafo, encontrados);
+        time_end = System.currentTimeMillis();
         print = cargar();
         int max = 0;
         int index = 0;
@@ -202,7 +203,6 @@ public class Ventana extends javax.swing.JFrame {
         }
         grafo = print;
         dibujarGrafo(grafo);
-        time_end = System.currentTimeMillis();
         JOptionPane.showMessageDialog(this, "La tarea tomo " + (time_end - time_start) + " milliseconds");
     }//GEN-LAST:event_jButton3MouseClicked
 
